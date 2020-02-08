@@ -1,4 +1,4 @@
-# SPDX-License-Identifier: GPL-2.0-or-later
+# SPDX-License-Identifier: GPL-2.0
 # Copyright (C) 2016-present Team LibreELEC (https://libreelec.tv)
 
 PKG_NAME="udpxy"
@@ -9,6 +9,10 @@ PKG_SITE="http://www.udpxy.com"
 PKG_URL="http://www.udpxy.com/download/1_23/${PKG_NAME}.${PKG_VERSION}-prod.tar.gz"
 PKG_DEPENDS_TARGET="toolchain"
 PKG_LONGDESC="A UDP-to-HTTP multicast traffic relay daemon."
+
+configure_target() {
+  export CFLAGS+=" -Wno-stringop-truncation"
+}
 
 makeinstall_target() {
   :

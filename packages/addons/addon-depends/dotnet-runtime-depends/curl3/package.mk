@@ -1,10 +1,11 @@
-# SPDX-License-Identifier: GPL-2.0-or-later
+# SPDX-License-Identifier: GPL-2.0
 # Copyright (C) 2018-present Team LibreELEC (https://libreelec.tv)
 
 . $(get_pkg_directory curl)/package.mk
 
 PKG_NAME="curl3"
 PKG_URL=""
+PKG_DEPENDS_UNPACK+=" curl"
 PKG_LONGDESC="curl for dotnet"
 
 unpack() {

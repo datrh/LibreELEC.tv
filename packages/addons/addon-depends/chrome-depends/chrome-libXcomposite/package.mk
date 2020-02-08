@@ -1,4 +1,4 @@
-# SPDX-License-Identifier: GPL-2.0-or-later
+# SPDX-License-Identifier: GPL-2.0
 # Copyright (C) 2018-present Team LibreELEC (https://libreelec.tv)
 
 . $(get_pkg_directory libXcomposite)/package.mk
@@ -6,6 +6,7 @@
 PKG_NAME="chrome-libXcomposite"
 PKG_LONGDESC="libXcomposite for chrome"
 PKG_URL=""
+PKG_DEPENDS_UNPACK+=" libXcomposite"
 
 PKG_CONFIGURE_OPTS_TARGET="$PKG_CONFIGURE_OPTS_TARGET \
                            --disable-static \
