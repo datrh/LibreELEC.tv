@@ -1,5 +1,5 @@
 # SPDX-License-Identifier: GPL-2.0
-# Copyright (C) 2016-2018 Team LibreELEC (https://libreelec.tv)
+# Copyright (C) 2016-present Team LibreELEC (https://libreelec.tv)
 # Copyright (C) 2018-present Team CoreELEC (https://coreelec.org)
 
 PKG_NAME="crazycat_aml"
@@ -10,7 +10,7 @@ PKG_LICENSE="GPL"
 PKG_SITE="https://bitbucket.org/CrazyCat/media_build"
 PKG_URL="https://bitbucket.org/CrazyCat/media_build/get/$PKG_VERSION.tar.gz"
 PKG_DEPENDS_TARGET="toolchain linux media_tree_cc_aml media_tree_aml"
-PKG_NEED_UNPACK="$LINUX_DEPENDS $(get_pkg_directory media_tree_cc_aml) $(get_pkg_directory media_tree_aml)"
+PKG_NEED_UNPACK="$LINUX_DEPENDS media_tree_cc_aml media_tree_aml"
 PKG_SECTION="driver.dvb"
 PKG_LONGDESC="DVB driver for TBS cards with CrazyCats additions"
 
@@ -24,6 +24,9 @@ PKG_ADDON_VERSION="${ADDON_VERSION}.${PKG_REV}"
 case "$LINUX" in
   amlogic-3.14)
     PKG_PATCH_DIRS="amlogic-3.14"
+    ;;
+  amlogic-4.9)
+    PKG_PATCH_DIRS="amlogic-4.9"
     ;;
 esac
 
@@ -43,7 +46,7 @@ make_target() {
   echo "obj-y += dvb/" >> "$PKG_BUILD/linux/drivers/media/platform/meson/Makefile"
   echo 'source "drivers/media/platform/meson/dvb/Kconfig"' >>  "$PKG_BUILD/linux/drivers/media/platform/Kconfig"
   sed -e 's/ && RC_CORE//g' -i $PKG_BUILD/linux/drivers/media/usb/dvb-usb/Kconfig
-
+ 
   # make config all
   kernel_make VER=$KERNEL_VER SRCDIR=$(kernel_path) allyesconfig
 
