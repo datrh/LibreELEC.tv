@@ -1,9 +1,9 @@
-# SPDX-License-Identifier: GPL-2.0-or-later
+# SPDX-License-Identifier: GPL-2.0
 # Copyright (C) 2016-present Team LibreELEC (https://libreelec.tv)
 
 PKG_NAME="libretro-2048"
-PKG_VERSION="8fa47bd4d4bf5808736461c9c33cc32ad872f61b"
-PKG_SHA256="2e11a5f5a2113f655d2c00a62f4f47e4075b540ba7ea8e689c69a4e53f75137c"
+PKG_VERSION="54d3ddd3c9f81d7bbd5714a670913e46301781c7"
+PKG_SHA256="cb5616e0984bdf364c7537c998e7341d95f00616aacf23cf8b3a59e6bb1352ba"
 PKG_LICENSE="Public domain"
 PKG_SITE="https://github.com/libretro/libretro-2048"
 PKG_URL="https://github.com/libretro/libretro-2048/archive/$PKG_VERSION.tar.gz"

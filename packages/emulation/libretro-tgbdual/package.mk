@@ -1,9 +1,9 @@
-# SPDX-License-Identifier: GPL-2.0-or-later
+# SPDX-License-Identifier: GPL-2.0
 # Copyright (C) 2016-present Team LibreELEC (https://libreelec.tv)
 
 PKG_NAME="libretro-tgbdual"
-PKG_VERSION="0a644e78e71c2aae33be36abaa7bc6e79bbf497e"
-PKG_SHA256="714faad84ed21d221f1d8884c26bd8b6a9863d06b79c9f5cda0ff3b1d9f94893"
+PKG_VERSION="240b0bfa67639089ed7a0a53d8c45901a79d1402"
+PKG_SHA256="7f92bea9295e19dcb6bc038bd6a74cf3c499542d67c13b2f027f096507a36283"
 PKG_LICENSE="GPLv3"
 PKG_SITE="https://github.com/libretro/tgbdual-libretro"
 PKG_URL="https://github.com/libretro/tgbdual-libretro/archive/$PKG_VERSION.tar.gz"

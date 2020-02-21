@@ -1,9 +1,9 @@
-# SPDX-License-Identifier: GPL-2.0-or-later
+# SPDX-License-Identifier: GPL-2.0
 # Copyright (C) 2016-present Team LibreELEC (https://libreelec.tv)
 
 PKG_NAME="libretro-o2em"
-PKG_VERSION="8df6bdddbfc551a47b3f0fed7bb5dfd50d2ce55d"
-PKG_SHA256="de9fc757ac32166bc49c54b684a6294b584e482e282aeedf1ab1b626b9204503"
+PKG_VERSION="481c061abd52f0f961921d785616d13a22fe3ff6"
+PKG_SHA256="aa8475cb4f557e33c6bf16a320a3d341c48e1ea8583122ba36f89db66ef61d9c"
 PKG_LICENSE="GPLv3"
 PKG_SITE="https://github.com/libretro/libretro-o2em"
 PKG_URL="https://github.com/libretro/libretro-o2em/archive/$PKG_VERSION.tar.gz"

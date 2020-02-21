@@ -1,4 +1,4 @@
-# SPDX-License-Identifier: GPL-2.0-or-later
+# SPDX-License-Identifier: GPL-2.0
 # Copyright (C) 2018-present Team LibreELEC (https://libreelec.tv)
 
 PKG_NAME="libretro-fsuae"
@@ -8,7 +8,7 @@ PKG_ARCH="x86_64"
 PKG_LICENSE="GPLv3"
 PKG_SITE="https://github.com/libretro/libretro-fsuae"
 PKG_URL="https://github.com/libretro/libretro-fsuae/archive/$PKG_VERSION.tar.gz"
-PKG_DEPENDS_TARGET="toolchain libmpeg2 openal-soft"
+PKG_DEPENDS_TARGET="toolchain glib libmpeg2 openal-soft"
 PKG_LONGDESC="FS-UAE amiga emulator."
 PKG_BUILD_FLAGS="-lto"
 PKG_TOOLCHAIN="autotools"

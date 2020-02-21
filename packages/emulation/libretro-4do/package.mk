@@ -1,9 +1,9 @@
-# SPDX-License-Identifier: GPL-2.0-or-later
+# SPDX-License-Identifier: GPL-2.0
 # Copyright (C) 2016-present Team LibreELEC (https://libreelec.tv)
 
 PKG_NAME="libretro-4do"
-PKG_VERSION="e1fec6e5c51ed6a579e4597e51e3facdb62df743"
-PKG_SHA256="7d2269e6c045ba37a9a5bf514dcd74a35746cd7a350593a3e16d76350e71fc86"
+PKG_VERSION="1fa503598323f7c573deca8dfef44f3b465c8074"
+PKG_SHA256="28d8a084fc67d29b27f837800e87307a2365637d92994b9edb2660fade7cfce7"
 PKG_LICENSE="LGPL"
 PKG_SITE="https://github.com/libretro/4do-libretro"
 PKG_URL="https://github.com/libretro/4do-libretro/archive/$PKG_VERSION.tar.gz"

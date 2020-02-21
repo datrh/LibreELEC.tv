@@ -1,9 +1,9 @@
-# SPDX-License-Identifier: GPL-2.0-or-later
+# SPDX-License-Identifier: GPL-2.0
 # Copyright (C) 2016-present Team LibreELEC (https://libreelec.tv)
 
 PKG_NAME="libretro-reicast"
-PKG_VERSION="79955142fbf710a2a9e0ae9ee57cc891d2d77571"
-PKG_SHA256="d4fbefff671228486b33a7a8c6df0d00b49ae7e57da7c92e851e1df1ea6eabdf"
+PKG_VERSION="cd53e401a67ce573941dab3e297b76e438e53e42"
+PKG_SHA256="a6b015073c31879092e34726c98a14148c1d0d077797d9374218e920dbcdde50"
 PKG_LICENSE="GPLv2"
 PKG_SITE="https://github.com/libretro/reicast-emulator"
 PKG_URL="https://github.com/libretro/reicast-emulator/archive/$PKG_VERSION.tar.gz"

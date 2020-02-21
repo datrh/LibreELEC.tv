@@ -1,9 +1,9 @@
-# SPDX-License-Identifier: GPL-2.0-or-later
+# SPDX-License-Identifier: GPL-2.0
 # Copyright (C) 2016-present Team LibreELEC (https://libreelec.tv)
 
 PKG_NAME="libretro-hatari"
-PKG_VERSION="de5e7434836478bd29c180102c4acb9fa1ed0535"
-PKG_SHA256="29b825ff4059c12a8bb45332296ab97e32c64a07b7a0ba3abb590c4365a3da92"
+PKG_VERSION="3fdaff4dce22c6a328fce932dc6ebcb30ff76dff"
+PKG_SHA256="3df972f2ad5f46ded6588dd1b67d153681309ef77714314b629ab5406dd333ae"
 PKG_LICENSE="GPLv3"
 PKG_SITE="https://github.com/libretro/hatari"
 PKG_URL="https://github.com/libretro/hatari/archive/$PKG_VERSION.tar.gz"

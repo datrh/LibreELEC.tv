@@ -1,9 +1,9 @@
-# SPDX-License-Identifier: GPL-2.0-or-later
+# SPDX-License-Identifier: GPL-2.0
 # Copyright (C) 2016-present Team LibreELEC (https://libreelec.tv)
 
 PKG_NAME="libretro-fbalpha"
-PKG_VERSION="bfededf36c4ca6f37926a66822d860a9754080c3"
-PKG_SHA256="0c31bb6fe84f2dfa9adead0a6fd23cb2d516c96c7213cec89e66444e13fe8478"
+PKG_VERSION="84eb9d928be2925c20d2577110f44e890d72532d"
+PKG_SHA256="c913ffd4df88bde6bfe6792f9b4fc82cce74af343b3e7cab50eaed1d7a9a0ee7"
 PKG_LICENSE="GPLv3"
 PKG_SITE="https://github.com/libretro/fbalpha"
 PKG_URL="https://github.com/libretro/fbalpha/archive/$PKG_VERSION.tar.gz"
