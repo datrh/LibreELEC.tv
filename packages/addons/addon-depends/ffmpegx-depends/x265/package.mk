@@ -1,9 +1,9 @@
-# SPDX-License-Identifier: GPL-2.0-or-later
+# SPDX-License-Identifier: GPL-2.0
 # Copyright (C) 2017-present Team LibreELEC (https://libreelec.tv)
 
 PKG_NAME="x265"
-PKG_VERSION="2.9"
-PKG_SHA256="ebae687c84a39f54b995417c52a2fdde65a4e2e7ebac5730d251471304b91024"
+PKG_VERSION="3.2"
+PKG_SHA256="364d79bcd56116a9e070fdeb1d9d2aaef1a786b4970163fb56ff0991a183133b"
 PKG_ARCH="x86_64"
 PKG_LICENSE="GPL"
 PKG_SITE="https://www.videolan.org/developers/x265.html"

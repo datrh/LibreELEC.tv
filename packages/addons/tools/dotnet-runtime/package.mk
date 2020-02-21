@@ -1,27 +1,27 @@
-# SPDX-License-Identifier: GPL-2.0-or-later
+# SPDX-License-Identifier: GPL-2.0
 # Copyright (C) 2018-present Team LibreELEC (https://libreelec.tv)
 
 case "$ARCH" in
   "aarch64")
     PKG_NC_ARCH="arm64"
-    PKG_SHA256="8baeaeb6ff7d65fbb8e7d085f7625cc4e3e2ffaecd97e80d2c5e4ca0ed598356"
-    PKG_URL="https://download.visualstudio.microsoft.com/download/pr/8931cb99-76f8-4d62-82be-881b79b03aac/9b31f0cbd0caac6d1639cece76d414a8/dotnet-runtime-2.2.0-linux-arm64.tar.gz"
+    PKG_SHA256="48d58ac6ff958ec7155befe76f83e276aceff50c4a7d1f578444a9a40720e412"
+    PKG_URL="https://download.visualstudio.microsoft.com/download/pr/f5e04830-50fc-435c-8bb5-fcd4629da944/8aa7cce5c3fcb6a7db180b923d3574ef/dotnet-runtime-2.2.6-linux-arm64.tar.gz"
     ;;
   "arm")
     PKG_NC_ARCH="arm"
-    PKG_SHA256="248e3d43b7b46b30f9059c775b08770c377f3a90f27bbc3da188a3f7f24de75d"
-    PKG_URL="https://download.visualstudio.microsoft.com/download/pr/a3f3e38e-246a-4eab-8da3-63f9cd1b1c13/c2e795a9bb03bc75d3cfa767f3f77310/dotnet-runtime-2.2.0-linux-arm.tar.gz"
+    PKG_SHA256="a4f2e63471c296b7b173105a2c1d5feb95b81e0a8131f73aeecc00440fa5f544"
+    PKG_URL="https://download.visualstudio.microsoft.com/download/pr/428aaa32-f66c-4847-b845-aa21f90504e4/1cf033db866414997140c2672bd75069/dotnet-runtime-2.2.6-linux-arm.tar.gz"
     ;;
   "x86_64")
     PKG_NC_ARCH="x64"
-    PKG_SHA256="452ea9e2fc4f84fd5d0bf17501aa99a99d33badabee23950e537a1a4dc6a2b05"
-    PKG_URL="https://download.visualstudio.microsoft.com/download/pr/1057e14e-16cc-410b-80a4-5c2420c8359c/004dc3ce8255475d4723de9a011ac513/dotnet-runtime-2.2.0-linux-x64.tar.gz"
+    PKG_SHA256="e30d4568c62d747b030e3c74f3d528ecb8d5c90e844e506bc0e3fcbce52b8cb1"
+    PKG_URL="https://download.visualstudio.microsoft.com/download/pr/9f21e352-9d2c-4e3b-af45-915da89158db/0e8a7ea83cc08d4bcf417a927a36ed6f/dotnet-runtime-2.2.6-linux-x64.tar.gz"
     ;;
 esac
 
 PKG_NAME="dotnet-runtime"
-PKG_VERSION="2.2.0"
-PKG_REV="104"
+PKG_VERSION="2.2.6"
+PKG_REV="107"
 PKG_ARCH="any"
 PKG_LICENSE="MIT"
 PKG_SITE="https://dotnet.github.io/"
@@ -36,14 +36,9 @@ PKG_ADDON_NAME=".Net Core Runtime"
 PKG_ADDON_TYPE="xbmc.python.script"
 PKG_MAINTAINER="Anton Voyl (awiouy)"
 
-unpack() {
-  mkdir -p $PKG_BUILD
-  $SCRIPTS/extract $PKG_NAME $PKG_BUILD
-}
-
 addon() {
   mkdir -p $ADDON_BUILD/$PKG_ADDON_ID/bin
-  cp -r $PKG_BUILD/$PKG_NAME-$PKG_VERSION/* \
+  cp -r $PKG_BUILD/* \
         $ADDON_BUILD/$PKG_ADDON_ID/bin
 
   mkdir -p $ADDON_BUILD/$PKG_ADDON_ID/libs

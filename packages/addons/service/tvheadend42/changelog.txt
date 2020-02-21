@@ -1,3 +1,15 @@
+121
+- update to 4.2.8-36
+- update comskip to 2019-11-03
+- fixed default recording path
+
+120
+- update to 4.2.8-27
+- update comskip to 2019-03-30
+
+119
+- Use system libidn2
+
 118
 - update to 4.2.7-44
 - fix tv_grab_file usage of & in urls

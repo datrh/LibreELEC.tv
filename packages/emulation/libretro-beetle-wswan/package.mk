@@ -1,9 +1,9 @@
-# SPDX-License-Identifier: GPL-2.0-or-later
+# SPDX-License-Identifier: GPL-2.0
 # Copyright (C) 2016-present Team LibreELEC (https://libreelec.tv)
 
 PKG_NAME="libretro-beetle-wswan"
-PKG_VERSION="207404bac2a3193b72ce1946ea07ffd13733d973"
-PKG_SHA256="9749701fd85bb376a6497f6a651c9548f489247a3130a9f3ae6bfc5e9058b352"
+PKG_VERSION="826f91f2e0960b2b68a27de7ad70a5d57043ebe7"
+PKG_SHA256="4db2f601ee62fa38dc05702c6b3bbb0def89acd42c5b140879beabaaa98b9ad4"
 PKG_LICENSE="GPLv2"
 PKG_SITE="https://github.com/libretro/beetle-wswan-libretro"
 PKG_URL="https://github.com/libretro/beetle-wswan-libretro/archive/$PKG_VERSION.tar.gz"

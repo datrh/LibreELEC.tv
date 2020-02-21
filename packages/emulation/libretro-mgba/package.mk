@@ -1,39 +1,28 @@
-# SPDX-License-Identifier: GPL-2.0-or-later
+# SPDX-License-Identifier: GPL-2.0
 # Copyright (C) 2016-present Team LibreELEC (https://libreelec.tv)
 
 PKG_NAME="libretro-mgba"
-PKG_VERSION="38bad71e119aa71f9c89d066fdfe589d3cdfd2e6"
-PKG_SHA256="851ef73c10e28caa5d3569c50cdd8cfe4a5ce304ea0c5e0699259669ae3bebd5"
+PKG_VERSION="8cf7b434fefb52be8bb3effe61e8fb16e9297733"
+PKG_SHA256="71343bf8035d7d243a5085b42e468d965fb55cef17dfe826aee7f098d63bbbf8"
 PKG_LICENSE="MPL 2.0"
-PKG_SITE="https://github.com/mgba-emu/mgba"
-PKG_URL="https://github.com/mgba-emu/mgba/archive/$PKG_VERSION.tar.gz"
+PKG_SITE="https://github.com/libretro/mgba"
+PKG_URL="https://github.com/libretro/mgba/archive/$PKG_VERSION.tar.gz"
 PKG_DEPENDS_TARGET="toolchain kodi-platform zlib"
 PKG_LONGDESC="game.libretro.mgba: mGBA for Kodi"
+PKG_TOOLCHAIN="make"
 
 PKG_LIBNAME="mgba_libretro.so"
 PKG_LIBPATH="$PKG_LIBNAME"
 PKG_LIBVAR="MGBA_LIB"
 
-PKG_CMAKE_OPTS_TARGET="-DUSE_DEBUGGERS=OFF \
-                       -DBUILD_QT=OFF \
-                       -DBUILD_SDL=OFF \
-                       -DBUILD_LIBRETRO=ON \
-                       -DSKIP_LIBRARY=ON \
-                       -DUSE_FFMPEG=OFF \
-                       -DUSE_ZLIB=ON \
-                       -DUSE_MINIZIP=OFF \
-                       -DUSE_LIBZIP=OFF \
-                       -DUSE_MAGICK=OFF \
-                       -DUSE_ELF=OFF"
+pre_configure_target() {
+  # fails to build in subdirs
+  cd $PKG_BUILD
+  rm -rf .$TARGET_NAME
+}
 
-if [ "${OPENGL_SUPPORT}" = "yes" -a "${PROJECT}" = "Generic" ]; then
-  PKG_DEPENDS_TARGET+=" libepoxy"
-elif [ "${OPENGLES_SUPPORT}" = "yes" ]; then
-  PKG_CMAKE_OPTS_TARGET+=" -DBUILD_GLES2=ON"
-fi
-
-pre_make_target() {
-  sed -e "s/set(VERSION_STRING \${GIT_BRANCH}-\${GIT_REV}-\${GIT_COMMIT_SHORT})/set(VERSION_STRING master-${PKG_VERSION:0:7})/" -i ${PKG_BUILD}/version.cmake
+make_target() {
+  make -f Makefile.libretro
 }
 
 makeinstall_target() {

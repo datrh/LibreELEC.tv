@@ -1,0 +1,11 @@
+--- a/v4l/scripts/make_kconfig.pl
++++ b/v4l/scripts/make_kconfig.pl
+@@ -632,6 +632,8 @@
+ disable_config('SOC_CAMERA');
+ disable_config('VIDEO_MT9M111');
+ disable_config('VIDEO_SAA7146_VV');
++disable_config('VIDEO_S5C73M3');
++disable_config('CXD2880_SPI_DRV');
+ disable_config('RC_CORE');
+ disable_config('IR_NEC_DECODER');
+ disable_config('IR_RC5_DECODER');

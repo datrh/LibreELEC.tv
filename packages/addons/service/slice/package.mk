@@ -1,4 +1,4 @@
-# SPDX-License-Identifier: GPL-2.0-or-later
+# SPDX-License-Identifier: GPL-2.0
 # Copyright (C) 2016-present Team LibreELEC (https://libreelec.tv)
 
 PKG_NAME="slice"
@@ -18,6 +18,10 @@ PKG_IS_ADDON="embedded"
 PKG_ADDON_NAME="Slice"
 PKG_ADDON_PROJECTS="Slice Slice3"
 PKG_ADDON_TYPE="xbmc.service"
+
+makeinstall_target() {
+  install_addon_files "${INSTALL}/usr/share/kodi/addons/${PKG_SECTION}.${PKG_NAME}"
+}
 
 addon() {
   :

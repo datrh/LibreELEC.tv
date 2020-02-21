@@ -1,9 +1,9 @@
-# SPDX-License-Identifier: GPL-2.0-or-later
+# SPDX-License-Identifier: GPL-2.0
 # Copyright (C) 2016-present Team LibreELEC (https://libreelec.tv)
 
 PKG_NAME="libretro-dinothawr"
-PKG_VERSION="2b36dc9be44e96a30d6c30eed2ad5b3dde0a3eda"
-PKG_SHA256="3711e5f22b2d858b240f0192dc45c5e10f8929164a2566b07c7ce776e214d9c4"
+PKG_VERSION="4dc35ebf937da42d98a1e1358c752f065858e6ca"
+PKG_SHA256="76514c865f4174391c40ae220768721ae3463f57173c19acba802dd48166337c"
 PKG_LICENSE="GPLv3"
 PKG_SITE="https://github.com/libretro/Dinothawr"
 PKG_URL="https://github.com/libretro/Dinothawr/archive/$PKG_VERSION.tar.gz"

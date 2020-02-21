@@ -1,9 +1,9 @@
-# SPDX-License-Identifier: GPL-2.0-or-later
+# SPDX-License-Identifier: GPL-2.0
 # Copyright (C) 2016-present Team LibreELEC (https://libreelec.tv)
 
 PKG_NAME="libretro-picodrive"
-PKG_VERSION="c64747fd2b28fa2c48058678f035a3379838a182"
-PKG_SHA256="f1442132ea417122fc5cc3e9a634201fc486b5adb810a05111f37a29cccc9905"
+PKG_VERSION="a9f220a890c5a0edad44fcf0ed2e03e1200cbd3f"
+PKG_SHA256="6136c86dc749d7221b79af5ccc42f422b1e495a9d3aba8fe3dcbe6b2295dfdf6"
 PKG_LICENSE="MAME"
 PKG_SITE="https://github.com/libretro/picodrive"
 PKG_URL="https://github.com/libretro/picodrive/archive/$PKG_VERSION.tar.gz"

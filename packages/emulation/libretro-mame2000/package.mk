@@ -1,9 +1,9 @@
-# SPDX-License-Identifier: GPL-2.0-or-later
+# SPDX-License-Identifier: GPL-2.0
 # Copyright (C) 2016-present Team LibreELEC (https://libreelec.tv)
 
 PKG_NAME="libretro-mame2000"
-PKG_VERSION="2084351834e26a94be89c961c64fd2199084767a"
-PKG_SHA256="89fdab4d850e2cd3af841e23b232f5e8740290934d62ef359180de21051589ad"
+PKG_VERSION="dfd6c396e69e2ae89f2f52f4afa991c74813d828"
+PKG_SHA256="db8758e7cf9b5ef244629fc4d235c31bca3d5402fe5a38cea4f266ad10a59600"
 PKG_LICENSE="GPLv2"
 PKG_SITE="https://github.com/libretro/mame2000-libretro"
 PKG_URL="https://github.com/libretro/mame2000-libretro/archive/$PKG_VERSION.tar.gz"

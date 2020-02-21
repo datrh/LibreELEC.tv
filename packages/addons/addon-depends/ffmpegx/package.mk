@@ -1,12 +1,12 @@
-# SPDX-License-Identifier: GPL-2.0-or-later
+# SPDX-License-Identifier: GPL-2.0
 # Copyright (C) 2016-present Team LibreELEC (https://libreelec.tv)
 
 PKG_NAME="ffmpegx"
-PKG_VERSION="4.1"
-PKG_SHA256="7afb163d6974693cdad742aa1224c33683c50845c67ee5ae35506efc631ac121"
+PKG_VERSION="4.2.1"
+PKG_SHA256="cec7c87e9b60d174509e263ac4011b522385fd0775292e1670ecc1180c9bb6d4"
 PKG_LICENSE="LGPLv2.1+"
 PKG_SITE="https://ffmpeg.org"
-PKG_URL="https://github.com/FFmpeg/FFmpeg/archive/n${PKG_VERSION}.tar.gz"
+PKG_URL="https://ffmpeg.org/releases/ffmpeg-$PKG_VERSION.tar.xz"
 PKG_DEPENDS_TARGET="toolchain aom bzip2 gnutls libvorbis opus x264 zlib"
 PKG_LONGDESC="FFmpegx is an complete FFmpeg build to support encoding and decoding."
 PKG_BUILD_FLAGS="-gold"
@@ -19,7 +19,7 @@ if [ "$KODIPLAYER_DRIVER" == "bcm2835-driver" ]; then
 fi
 
 if [ "$TARGET_ARCH" = "x86_64" ]; then
-  PKG_DEPENDS_TARGET+=" nasm:host x265"
+  PKG_DEPENDS_TARGET+=" nasm:host intel-vaapi-driver x265"
 fi
 
 if [[ ! $TARGET_ARCH = arm ]] || target_has_feature neon; then
@@ -34,14 +34,14 @@ fi
 pre_configure_target() {
   cd $PKG_BUILD
   rm -rf .$TARGET_NAME
-  
+
   # pass gnutls to build
   PKG_CONFIG_PATH="$(get_build_dir gnutls)/.INSTALL_PKG/usr/lib/pkgconfig"
   CFLAGS="$CFLAGS -I$(get_build_dir gnutls)/.INSTALL_PKG/usr/include"
   LDFLAGS="$LDFLAGS -L$(get_build_dir gnutls)/.INSTALL_PKG/usr/lib"
 
   if [ "$KODIPLAYER_DRIVER" == "bcm2835-driver" ]; then
-    CFLAGS="-DRPI=1 -I$SYSROOT_PREFIX/usr/include/IL -I$SYSROOT_PREFIX/usr/include/interface/vcos/pthreads -I$SYSROOT_PREFIX/usr/include/interface/vmcs_host/linux $CFLAGS"
+    CFLAGS="$CFLAGS -DRPI=1 -I$SYSROOT_PREFIX/usr/include/IL"
     PKG_FFMPEG_LIBS="-lbcm_host -ldl -lmmal -lmmal_core -lmmal_util -lvchiq_arm -lvcos -lvcsm"
   fi
 
@@ -66,14 +66,14 @@ pre_configure_target() {
   if [[ "$TARGET_ARCH" = "x86_64" ]]; then
     PKG_FFMPEG_HW_ENCODERS_GENERIC="\
     `#Video encoders` \
-    --enable-encoder=h264_nvenc \
     --enable-encoder=h264_vaapi \
-    --enable-encoder=hevc_nvenc \
     --enable-encoder=hevc_vaapi \
     --enable-encoder=mjpeg_vaapi \
     --enable-encoder=mpeg2_vaapi \
     --enable-encoder=vp8_vaapi \
     --enable-encoder=vp9_vaapi \
+    --disable-encoder=h264_nvenc \
+    --disable-encoder=hevc_nvenc \
     \
     `#Video hwaccel` \
     --enable-hwaccel=h263_vaapi \
@@ -138,7 +138,6 @@ configure_target() {
     \
     `#Licensing options` \
     --enable-gpl \
-    --disable-nonfree \
     \
     `#Documentation options` \
     --disable-doc \

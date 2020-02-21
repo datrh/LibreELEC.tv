@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# SPDX-License-Identifier: GPL-2.0-or-later
+# SPDX-License-Identifier: GPL-2.0
 # Copyright (C) 2016-present Team LibreELEC (https://libreelec.tv)
 
 . /etc/profile
@@ -35,6 +35,11 @@ chmod a+x $ADDON_DIR/bin/*
 # workaround to support old 4.1.x version upgrade for Tvh after 4.1.2369
 if [ -f "$ADDON_HOME/dvr/config/dvr-config" ]; then
   rm $ADDON_HOME/dvr/config/dvr-config
+fi
+
+# workaround to create default Tvh directories without entering samba share
+if [ ! -d "/storage/recordings" ]; then
+  mkdir -p /storage/recordings /storage/picons/tvh /storage/picons/vdr
 fi
 
 if [ -f "$ADDON_HOME/channel/config/config.tmp" ]; then

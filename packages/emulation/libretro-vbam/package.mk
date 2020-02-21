@@ -1,9 +1,9 @@
-# SPDX-License-Identifier: GPL-2.0-or-later
+# SPDX-License-Identifier: GPL-2.0
 # Copyright (C) 2016-present Team LibreELEC (https://libreelec.tv)
 
 PKG_NAME="libretro-vbam"
-PKG_VERSION="8041717e1c9993085754b646d3c62ef9422ad652"
-PKG_SHA256="0dc90879651118310d3334400d11de77c4682191df6a73aed5abfec57df0f2c4"
+PKG_VERSION="6bdd6d1b22e40cfe715f05bc6653936eae40658f"
+PKG_SHA256="2d38a9d961f7d73d7c30a0dbf5e14ac563a91010d24b7e94ac6fd8dd6b36d4d9"
 PKG_LICENSE="GPLv2"
 PKG_SITE="https://github.com/libretro/vbam-libretro"
 PKG_URL="https://github.com/libretro/vbam-libretro/archive/$PKG_VERSION.tar.gz"

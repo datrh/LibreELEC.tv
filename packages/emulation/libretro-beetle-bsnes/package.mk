@@ -1,9 +1,9 @@
-# SPDX-License-Identifier: GPL-2.0-or-later
+# SPDX-License-Identifier: GPL-2.0
 # Copyright (C) 2016-present Team LibreELEC (https://libreelec.tv)
 
 PKG_NAME="libretro-beetle-bsnes"
-PKG_VERSION="2c67a30c704338a7a7daf213501582bc7951545b"
-PKG_SHA256="9d04079073bfbf9bb5d89972977d64b17f5620dfb5399055140e6a3d79eb1116"
+PKG_VERSION="b40adc710bd14684bbb53102a7e42267a8dea9cb"
+PKG_SHA256="21c39d3557e89b2ae1f1397a996e49f5f73c1e7767d505faff8d1b4fe84357ff"
 PKG_LICENSE="GPLv2"
 PKG_SITE="https://github.com/libretro/beetle-bsnes-libretro"
 PKG_URL="https://github.com/libretro/beetle-bsnes-libretro/archive/$PKG_VERSION.tar.gz"

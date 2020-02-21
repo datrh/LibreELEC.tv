@@ -1,9 +1,9 @@
-# SPDX-License-Identifier: GPL-2.0-or-later
+# SPDX-License-Identifier: GPL-2.0
 # Copyright (C) 2016-present Team LibreELEC (https://libreelec.tv)
 
 PKG_NAME="libretro-scummvm"
-PKG_VERSION="7f39a7fada991d59b902db3b7672ffa8c7f54e7d"
-PKG_SHA256="560f30c8b3c9d8896c57e9a7f728091fdbb0b4a06941edd4b3cc6a1759d9d55a"
+PKG_VERSION="9b1220886385b41a6f86b96faa3b9cfc77dcc57c"
+PKG_SHA256="0e831775438a29c550e6e2595eca429ad1d62c12e92ca7182ab3775390c0c244"
 PKG_LICENSE="GPLv3"
 PKG_SITE="https://github.com/libretro/scummvm"
 PKG_URL="https://github.com/libretro/scummvm/archive/$PKG_VERSION.tar.gz"
@@ -21,6 +21,7 @@ pre_make_target() {
   cd $PKG_BUILD
   CXXFLAGS+=" -DHAVE_POSIX_MEMALIGN=1"
   export AR+=" cru"
+  export LD="$CC"
 }
 
 makeinstall_target() {
